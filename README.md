@@ -27,3 +27,31 @@ There are some ‘NAN’ and ‘infinite’ values in the features ‘Flow Bytes
 The total number of samples which contain these are less than 0.01% of the total number of samples, hence I have decided to drop these samples completly. This won't affect the dataset much.
 
 As for Scaling, I have decided to go with Robust Scaling, it uses the percentiles of 75 and 25 instead of max and min value in the formula - (value – median) / (p75 – p25). (where p=percentile). This method of scaling does not get affected by the outliers in the feature and at the same time keeps them in the dataset as it is. We do have quite a lot of outliers in some of these features, using a standard scaling or normalization method would lead to a massive disturbance in the distribution of the feature. 
+
+# literature study
+As for literature study I have refered to these 3 papers and some implementations of ml for this dataset on kaggle and github.
+
+A. Two-Level Hybrid Model for Anomalous Activity Detection in IoT Networks - https://www.researchgate.net/publication/331417497_A_Two-Level_Hybrid_Model_for_Anomalous_Activity_Detection_in_IoT_Networks. 
+
+Two level anomaly detection model - 1st model is flow based, 2nd model(random forest classifier) to find the category of anomaly.
+For feature selection they have used Recursive Feature Elimination. (RFE)
+For handling class imbalance they used Synthetic Minority Over-Sampling Technique (SMOTE) and Edited Nearest Neighbors(ENN) to create a synthetic sample of minority classes to improve the classification accuracy of minor classes.  
+used the CICIDS2017 and UNSW-15 datasets and got good precision, recall and f-1 score for both.
+
+
+B. Efficient Network Intrusion Detection Using PCA-Based Dimensionality Reduction of Features (CIC IDS 2017). - https://sci-hubtw.hkvisa.net/10.1109/isncc.2019.8909140#
+
+PCA for dimension reduction (10 features).
+IP (Internet Protocol) address to an integer representation.
+Classifiers such as Random Forest (RF), Bayesian Network, Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA). Training and testing sets with a ratio of 70:30.
+Performance evaluation using Detection Rate (DR), F-Measure, False Alarm Rate (FAR), and Accuracy.
+Compared their results with various other works.
+
+
+
+C. Deep Learning for Cyber Security Intrusion Detection: Approaches, Datasets, and Comparative. - https://dora.dmu.ac.uk/bitstream/handle/2086/18792/Deep_Learning_for_Cyber_Security_Intrusion_Detection__Approaches__Datasets__and_Comparative_Study%20(1).pdf;jsessionid=7AF2EC244BD6F5477A2650C7E855BF67?sequence=1. 
+
+A survey of various deep learning approaches for different types of cyber security ids datasets
+Seven deep learning models including recurrent neural networks, deep neural networks, restricted Boltzmann machines, deep belief networks, convolutional neural networks, deep Boltzmann machines, and deep autoencoders.
+Accuracy, false alarm rate, and detection rate for evaluating the efficiency
+Worked on CSE-CICIDS2018 dataset and the Bot-IoT dataset.
