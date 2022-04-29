@@ -77,5 +77,13 @@ Worked on the CSE-CICIDS2018 dataset and the Bot-IoT dataset.
 
 # Categorical feature - Protocol
 We have 3 protocols throughout the dataset.
+
 ![image](https://user-images.githubusercontent.com/78835534/165983522-94d96fa8-73fd-421a-932d-cc33d0440bce.png)
+
+Since the cardinality of this feature is low, I have decided to use One Hot Encoding for this feature. one hot encoding makes n number of columns for n number of unique values in the dataset.
+![image](https://user-images.githubusercontent.com/78835534/165983749-0215661d-232c-467b-8ff9-10a79333571b.png)
+
+
+
+
 
