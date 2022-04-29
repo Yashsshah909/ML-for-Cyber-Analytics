@@ -74,3 +74,8 @@ A survey of various deep learning approaches for different types of cyber securi
 Seven deep learning models include recurrent neural networks, deep neural networks, restricted Boltzmann machines, deep belief networks, convolutional neural networks, deep Boltzmann machines, and deep autoencoders.
 Accuracy, false alarm rate, and detection rate for evaluating the efficiency
 Worked on the CSE-CICIDS2018 dataset and the Bot-IoT dataset.
+
+# Categorical feature - Protocol
+We have 3 protocols throughout the dataset.
+![image](https://user-images.githubusercontent.com/78835534/165983522-94d96fa8-73fd-421a-932d-cc33d0440bce.png)
+
