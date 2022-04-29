@@ -81,8 +81,22 @@ We have 3 protocols throughout the dataset.
 ![image](https://user-images.githubusercontent.com/78835534/165983522-94d96fa8-73fd-421a-932d-cc33d0440bce.png)
 
 Since the cardinality of this feature is low, I have decided to use One Hot Encoding for this feature. one hot encoding makes n number of columns for n number of unique values in the dataset.
+
 ![image](https://user-images.githubusercontent.com/78835534/165983749-0215661d-232c-467b-8ff9-10a79333571b.png)
 
+# categorical feature - Destination port. 
+we have 53805 unique dest. Ports, hence we cannot use one hot encoding for this feature. I have decided to use 2 different methods for this feature and this is where my project was concentrated at. 
+
+# 1st method - Frequency encoded. 
+In this method a particular value in the dataset gets replaced by a value between 0-1 indicating how frequent it is in the dataset. 
+
+
+more on this method - https://www.geeksforgeeks.org/feature-encoding-techniques-machine-learning/
+
+# 2nd Method - using an aggregating function.
+This method keeps the high frequency values as it is till it reaches a specified threshold size of the column and then replaces the remaining values with a common value. 
+
+more on this method - https://towardsdatascience.com/dealing-with-features-that-have-high-cardinality-1c9212d7ff1b
 
 
 
