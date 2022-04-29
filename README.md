@@ -7,6 +7,25 @@ Hence I have looked at some of the categorical features in this and tried to use
 The dataset used in this is - IDS CIC 2017 dataset - https://www.unb.ca/cic/datasets/ids-2017.html. This link has a detailed explanation of what this dataset contains.
 
 # Categorical features
+Lets look at the categorical features we have with us - 
+1. flow ID - It is just a combination of source IP, destination IP, source port, destination port and protocol. Hence it is not a real feature.
+
+2. Source IP - The source IP address is normally the address that the packet was sent from. Attacks can come from any IP address and hence this feature did not seem reliable to use.
+
+3. Destination IP - The IP address of the server to which traffic is forwarded. Same reason as source IP.
+
+4. Destination Port - Destination Ports Are Server Applications. We have about 53805 unique dest. Ports. very high cardinality for a feature. 
+Port number description - https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers.
+Service Name and Transport Protocol Port Number Registry - https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
+Its datatype is integer and hence can be mistaken for a numerical feature. It is present in the MachineLearningCVE csv files and end up being used as a numerical feature.
+
+5. Source Port - The source port is a next-available number assigned by TCP/IP to the user's machine. This assigned client number is how the network address translation (NAT), which typically resides in the router, determines which user to send back the responses to.
+
+6. Protocol - A network protocol is a set of established rules that dictate how to format, transmit and receive data so that computer network devices - from servers and routers to endpoints - can communicate, regardless of the differences in their underlying infrastructures, designs or standards.
+
+7. Timestamp - It is the part of the meta data and just denotes the timestamp of when the packet capture was done. hence it does not have much significance as a feature. 
+
+
 
 
 
